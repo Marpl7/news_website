@@ -8,11 +8,6 @@ def articles_list(request):
 
     articles = Article.objects.all()
 
-    for article in articles:
-        print(article.title)
-        for tag in article.scopes.all():
-            print(tag)
-
     context = {
 
         'articles': articles
